@@ -6,20 +6,47 @@ class FirstTR1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // all ui part in the build method in the flutter
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(appTitle),
+          title: const Center(child: Text(appTitle)),
         ),
-        floatingActionButton: FloatingActionButton(
+        body: Container(
+          height: 200,
+          color: Colors.black12,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text("First name"),
+                Text("Middle name"),
+                Text("Last name"),
+                ElevatedButton(onPressed: () {}, child: Text("Submit")),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    Text("First name"),
+                    Text("Middle name"),
+                    Text("Last name"),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton.extended(
+          extendedPadding: EdgeInsets.all(8.0),
           onPressed: () {},
           backgroundColor: Colors.black,
-          child: const Icon(
+          icon: const Icon(
             Icons.add,
             size: 40.0,
             color: Colors.amber,
           ),
+          label: Text("plust"),
         ),
       ),
     );
