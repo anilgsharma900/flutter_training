@@ -26,11 +26,11 @@ class FirstTR1 extends StatelessWidget {
                 Text("Last name"),
                 ElevatedButton(onPressed: () {}, child: Text("Submit")),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
                     Text("First name"),
                     Text("Middle name"),
-                    Text("Last name"),
+                    Expanded(
+                        child: Align(alignment: Alignment.centerRight, child: Text("Last name"))),
                   ],
                 ),
               ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/first_tr.dart';
+import 'package:flutter_training/second_tr_inputwidgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FirstTR1(),
+      home: const SecondTrInputWidget(),
+      // home: const FirstTR1(),
     );
   }
 }
